@@ -101,16 +101,16 @@
     /* =========================================================
        포트폴리오 목록 — 여기만 고치면 됩니다
        category : exhibition / stage / corporate / shortform
-       type     : "youtube" (src에 유튜브 영상 ID)
-                  "vertical" (세로 숏폼 유튜브 ID)
-                  "image"   (src에 이미지 경로, 예: images/a.jpg)
+       type     : "youtube"  (src에 유튜브 링크를 그대로 붙여넣기)
+                  "vertical" (세로 숏폼 유튜브 링크)
+                  "image"    (src에 이미지 경로, 예: images/a.jpg)
        ========================================================= */
     const WORKS = [
       {
         category: "stage",
         title: "대령광대",
         type: "youtube",
-        src: "dQw4w9WgXcQ",
+        src: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         credit: "국가무형유산 줄타기 전승기획공연\n과천 중앙공원\n2026",
         text: "작업 설명을 적어주세요."
       },
@@ -154,10 +154,16 @@
     const titleEl = document.getElementById("center-title");
     const center  = document.querySelector(".col-center");
 
+    // 유튜브 링크 어떤 형태든(watch?v=, youtu.be/, shorts/) 영상 ID만 뽑아냄
+    function ytId(s) {
+      const m = String(s).match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/);
+      return m ? m[1] : s;
+    }
+
     function media(w) {
       if (w.type === "youtube" || w.type === "vertical") {
         return `<div class="media ${w.type}">
-          <iframe src="https://www.youtube.com/embed/${w.src}" title="${w.title}"
+          <iframe src="https://www.youtube.com/embed/${ytId(w.src)}" title="${w.title}"
             loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
         </div>`;
       }

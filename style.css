@@ -12,7 +12,7 @@ html, body { height: 100%; }
 
 body {
   font-family: "IBM Plex Mono", "Nanum Gothic Coding", monospace;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.32;          /* 참고 이미지처럼 촘촘한 줄 간격 */
   color: var(--text);
   background: var(--bg);
@@ -64,7 +64,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0 0 24px; }
   margin-top: auto;
   padding-top: 40px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* ===== 가운데: 포트폴리오 ===== */
