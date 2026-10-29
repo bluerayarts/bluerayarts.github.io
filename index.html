@@ -101,43 +101,151 @@
     /* =========================================================
        포트폴리오 목록 — 여기만 고치면 됩니다
        category : exhibition / stage / corporate / shortform
-       type     : "youtube"  (src에 유튜브 링크를 그대로 붙여넣기)
-                  "vertical" (세로 숏폼 유튜브 링크)
-                  "image"    (src에 이미지 경로, 예: images/a.jpg)
+       type     : "youtube"   가로 유튜브 (src에 링크 그대로)
+                  "vertical"  세로 유튜브 숏폼
+                  "instagram" 인스타그램 릴스
+                  "image"     사진 (src에 images/파일명.jpg)
+       main     : 1, 2, 3 을 적으면 첫 화면에 그 순서로 나옴
+       credit, text 는 비워둬도 됩니다
        ========================================================= */
     const WORKS = [
+
+      /* ---------- 전시 ---------- */
       {
-        category: "stage",
-        title: "대령광대",
+        category: "exhibition",
+        title: "Exhibition Film 01",
         type: "youtube",
-        src: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        credit: "국가무형유산 줄타기 전승기획공연\n과천 중앙공원\n2026",
-        text: "작업 설명을 적어주세요."
+        src: "https://youtu.be/6PBgNRDJfpI",
+        main: 1,
+        credit: "",
+        text: "전시 공간과 작품의 결을 담은 아카이빙 영상."
       },
       {
-        category: "stage",
-        title: "영아티스트 콘서트",
+        category: "exhibition",
+        title: "Exhibition Film 02",
         type: "youtube",
-        src: "dQw4w9WgXcQ",
-        credit: "푸르지오 아트홀\n2026",
-        text: "작업 설명을 적어주세요."
+        src: "https://youtu.be/EYofZZovMeU",
+        main: 2,
+        credit: "",
+        text: "작품과 관람의 흐름을 따라가는 전시 기록 영상."
+      },
+      {
+        category: "exhibition",
+        title: "Exhibition Film 03",
+        type: "youtube",
+        src: "https://youtu.be/LkBvAedcKro",
+        credit: "",
+        text: "전시 기록 영상."
+      },
+      {
+        category: "exhibition",
+        title: "Exhibition Short 01",
+        type: "vertical",
+        src: "https://youtube.com/shorts/-wv3aZTqN28",
+        credit: "",
+        text: "세로형 전시 숏폼."
+      },
+      {
+        category: "exhibition",
+        title: "Exhibition Short 02",
+        type: "vertical",
+        src: "https://youtube.com/shorts/9vpvRyV5JdM",
+        credit: "",
+        text: "세로형 전시 숏폼."
+      },
+      {
+        category: "exhibition",
+        title: "Exhibition Reel 01",
+        type: "instagram",
+        src: "https://www.instagram.com/reel/CydHDC9tKjA/",
+        credit: "",
+        text: "인스타그램 전시 릴스."
+      },
+      {
+        category: "exhibition",
+        title: "Exhibition Reel 02",
+        type: "instagram",
+        src: "https://www.instagram.com/reel/C0uB48HNFd3/",
+        credit: "",
+        text: "인스타그램 전시 릴스."
+      },
+
+      /* ---------- 협업 및 행사 ---------- */
+      {
+        category: "corporate",
+        title: "Event Film",
+        type: "youtube",
+        src: "https://www.youtube.com/watch?v=xeeGviJB-E0",
+        credit: "",
+        text: "행사 스케치 영상."
       },
       {
         category: "corporate",
-        title: "콘노유키 인터뷰",
+        title: "Ommegang",
         type: "youtube",
-        src: "dQw4w9WgXcQ",
-        credit: "오프트랙 스튜디오\n2025",
-        text: "작업 설명을 적어주세요."
+        src: "https://youtu.be/XgOWXdQqK4o",
+        credit: "",
+        text: "브뤼셀 전통 행렬 축제 오메강(Ommegang)의 현장을 담은 기록 영상."
       },
       {
-        category: "shortform",
-        title: "맥코인 썸머 콜렉션 룩북",
-        type: "image",
-        src: "images/sample.jpg",
-        credit: "맥코인\n2025",
-        text: "작업 설명을 적어주세요."
+        category: "corporate",
+        title: "Film Festival Trailer",
+        type: "youtube",
+        src: "https://youtu.be/1uwzund2T3E",
+        credit: "",
+        text: "영화제 공식 트레일러."
+      },
+      {
+        category: "corporate",
+        title: "정관스님 한식 행사",
+        type: "youtube",
+        src: "https://youtu.be/CUSOBtDt2vM",
+        credit: "",
+        text: "정관스님과 함께한 사찰음식·한식 행사 기록."
+      },
+      {
+        category: "corporate",
+        title: "영화제 행사 영상",
+        type: "youtube",
+        src: "https://youtu.be/eBw-D4Syz3c",
+        main: 3,
+        credit: "",
+        text: "영화제 현장의 분위기와 주요 순간을 담은 행사 영상."
+      },
+      {
+        category: "corporate",
+        title: "판소리 워크숍",
+        type: "youtube",
+        src: "https://youtu.be/hpOz4yAhNV0",
+        credit: "",
+        text: "판소리를 직접 배우고 체험하는 워크숍 기록."
+      },
+      {
+        category: "corporate",
+        title: "부채춤·소고춤 워크숍",
+        type: "youtube",
+        src: "https://youtu.be/s1h5ns_tKug",
+        credit: "",
+        text: "한국 전통무용 부채춤과 소고춤 워크숍 기록."
+      },
+      {
+        category: "corporate",
+        title: "벨기에 유럽·한국 만화전",
+        type: "youtube",
+        src: "https://youtu.be/s1h5ns_tKug",   // ← 부채춤 영상과 같은 링크예요. 올바른 링크로 바꿔주세요
+        credit: "",
+        text: "벨기에에서 열린 유럽·한국 만화 교류전 기록."
+      },
+      {
+        category: "corporate",
+        title: "태권도 행사",
+        type: "youtube",
+        src: "https://youtu.be/KRTTo_12rpg",
+        credit: "",
+        text: "태권도 시범과 현장을 담은 행사 영상."
       }
+
+      /* 공연, 숏폼 및 사진은 비워두면 "준비 중입니다."가 나옵니다 */
     ];
 
     const NAMES = {
@@ -159,6 +267,11 @@
       const m = String(s).match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/);
       return m ? m[1] : s;
     }
+    // 인스타그램 릴스/게시물 코드 뽑아냄
+    function igCode(s) {
+      const m = String(s).match(/instagram\.com\/(?:reel|p)\/([\w-]+)/);
+      return m ? m[1] : s;
+    }
 
     function media(w) {
       if (w.type === "youtube" || w.type === "vertical") {
@@ -167,7 +280,27 @@
             loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
         </div>`;
       }
+      if (w.type === "instagram") {
+        return `<div class="media instagram">
+          <iframe src="https://www.instagram.com/reel/${igCode(w.src)}/embed" title="${w.title}"
+            loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+        </div>`;
+      }
       return `<div class="media image"><img src="${w.src}" alt="${w.title}" loading="lazy"></div>`;
+    }
+
+    function card(w, i) {
+      return `
+        <article class="work">
+          ${media(w)}
+          <div class="work-info">
+            <p>${i + 1}. ${w.title}</p>
+            <div>
+              ${w.credit ? `<p class="credit">${w.credit.replace(/\n/g, "<br>")}</p>` : ""}
+              ${w.text ? `<p${w.credit ? ' class="gap"' : ""}>${w.text}</p>` : ""}
+            </div>
+          </div>
+        </article>`;
     }
 
     function render(filter) {
@@ -175,20 +308,15 @@
       titleEl.textContent = NAMES[filter];
       quoteEl.hidden = filter !== "quote";
 
-      const list = filter === "all" ? WORKS : WORKS.filter(w => w.category === filter);
+      let list;
+      if (filter === "all") {
+        list = WORKS.filter(w => w.main).sort((a, b) => a.main - b.main);
+      } else {
+        list = WORKS.filter(w => w.category === filter);
+      }
+
       worksEl.innerHTML = filter === "quote" ? "" :
-        (list.length ? list.map((w, i) => `
-          <article class="work">
-            ${media(w)}
-            <div class="work-info">
-              <p>${i + 1}. ${w.title}</p>
-              <div>
-                <p class="credit">${w.credit.replace(/\n/g, "<br>")}</p>
-                <p class="gap">${w.text}</p>
-              </div>
-            </div>
-          </article>`).join("")
-        : `<p class="empty">준비 중입니다.</p>`);
+        (list.length ? list.map(card).join("") : `<p class="empty">준비 중입니다.</p>`);
 
       document.querySelectorAll("[data-filter]").forEach(a =>
         a.classList.toggle("current", a.dataset.filter === filter && filter !== "all"));
