@@ -11,7 +11,16 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* 세로 영상(숏폼) 가운데 정렬 */
-    .media.vertical, .media.instagram { margin-left: auto; margin-right: auto; }
+    .media.vertical {
+      position: relative;
+      width: min(100%, 360px);
+      aspect-ratio: 9 / 16;
+      margin-left: auto; margin-right: auto;
+    }
+    .media.vertical iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: 0;
+    }
 
     /* 견적 표 */
     .price-table { width: 100%; border-collapse: collapse; font: inherit; table-layout: fixed; }
