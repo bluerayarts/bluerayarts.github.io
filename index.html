@@ -9,6 +9,18 @@
   <!-- 영문: IBM Plex Mono / 한글: Nanum Gothic Coding (둘 다 고정폭) -->
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* 견적 표 */
+    .price-table { width: 100%; border-collapse: collapse; font: inherit; }
+    .price-table th, .price-table td {
+      text-align: left; vertical-align: top;
+      padding: 8px 12px 8px 0;
+      border-bottom: 1px solid currentColor;
+    }
+    .price-table th { font-weight: 500; }
+    .price-table td:nth-child(2) { white-space: nowrap; }
+    .quote .inquiry { text-decoration: underline; text-underline-offset: 3px; }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -47,7 +59,22 @@
 
       <!-- 견적 안내 (Quote 메뉴 클릭 시 표시) -->
       <section id="quote-box" class="quote" hidden>
-        <p>프로젝트 내용, 촬영 일정, 장소, 예산을 적어 메일로 보내주시면 견적을 안내드립니다.</p>
+        <table class="price-table">
+          <thead>
+            <tr><th>항목</th><th>금액</th><th>구성</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>전시 아카이빙</td><td>100만 원</td><td>인터뷰 포함</td></tr>
+            <tr><td>공연 아카이빙</td><td>90만 원</td><td>5분 내외 하이라이트 영상 1편</td></tr>
+            <tr><td>공연 풀영상</td><td>30만 원 추가</td><td></td></tr>
+            <tr><td>협업 및 행사</td><td>90만 원</td><td>5분 내외 영상 1편</td></tr>
+            <tr><td>숏폼</td><td>15만 원</td><td>60초 내외 영상 1편</td></tr>
+            <tr><td>스틸 사진</td><td>20만 원 추가</td><td></td></tr>
+          </tbody>
+        </table>
+
+        <p class="gap">프로젝트 내용, 촬영 일정, 장소, 예산을 적어 문의해 주시면 견적을 안내드립니다.</p>
+        <p class="gap"><a class="inquiry" href="https://forms.gle/w4UMgEPdidHNrQ7a8" target="_blank" rel="noopener">문의</a></p>
         <p class="gap"><a href="mailto:blueray.arts@gmail.com">blueray.arts@gmail.com</a></p>
       </section>
     </main>
@@ -277,9 +304,65 @@
         src: "https://youtu.be/1hFT5CnhkQE",
         credit: "",
         text: "공연 기록 영상."
-      }
+      },
 
-      /* 숏폼 및 사진은 비워두면 "준비 중입니다."가 나옵니다 */
+      /* ---------- 숏폼 및 사진 ---------- */
+      {
+        category: "shortform",
+        title: "막걸리편",
+        type: "vertical",
+        src: "https://youtube.com/shorts/J0qDUvEbxVg",
+        credit: "",
+        text: ""
+      },
+      {
+        category: "shortform",
+        title: "영화제 홍보릴스",
+        type: "vertical",
+        src: "https://youtube.com/shorts/L4bnFPbEQx4",
+        credit: "",
+        text: ""
+      },
+      {
+        category: "shortform",
+        title: "만화축제편",
+        type: "vertical",
+        src: "https://youtube.com/shorts/x1OYDp7_Q14",
+        credit: "",
+        text: ""
+      },
+      {
+        category: "shortform",
+        title: "떡볶이편",
+        type: "vertical",
+        src: "https://youtube.com/shorts/KZGelie9mwE",
+        credit: "",
+        text: ""
+      },
+      {
+        category: "shortform",
+        title: "비오는 날편",
+        type: "vertical",
+        src: "https://youtube.com/shorts/eea9pf_ubL0",
+        credit: "",
+        text: ""
+      },
+      {
+        category: "shortform",
+        title: "스팸김치볶음밥편",
+        type: "vertical",
+        src: "https://youtube.com/shorts/URrMuS4bkfc",
+        credit: "",
+        text: ""
+      },
+      {
+        category: "shortform",
+        title: "최고의 계란편",
+        type: "vertical",
+        src: "https://youtube.com/shorts/P-2ypBZvz3k",
+        credit: "",
+        text: ""
+      }
     ];
 
     const NAMES = {
